@@ -12,7 +12,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         // chat client will use this to connect to the server
-        registry.addEndpoint("/ws-chat").setAllowedOrigins("*").withSockJS();
+        registry.addEndpoint("/gs-location-websocket").setAllowedOriginPatterns("http://localhost:8080","http://localhost:8082").withSockJS();
     }
 
     @Override

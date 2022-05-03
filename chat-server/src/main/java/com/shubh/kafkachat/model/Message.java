@@ -4,8 +4,26 @@ public class Message {
     private String sender;
     private String content;
     private String timestamp;
+    private String longitude;
+    private String latitude;
 
     public Message() {
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
 
     public String getTimestamp() {
@@ -43,6 +61,8 @@ public class Message {
                 "sender='" + sender + '\'' +
                 ", content='" + content + '\'' +
                 ", timestamp='" + timestamp + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", latitude='" + latitude + '\'' +
                 '}';
     }
 }

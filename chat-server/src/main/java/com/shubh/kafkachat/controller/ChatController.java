@@ -19,8 +19,10 @@ public class ChatController {
     @Autowired
     private KafkaTemplate<String, Message> kafkaTemplate;
 
-    @PostMapping(value = "/api/send", consumes = "application/json", produces = "application/json")
+//    @PostMapping(value = "/api/send", consumes = "application/json", produces = "application/json")
+    @MessageMapping("/location")
     public void sendMessage(@RequestBody Message message) {
+        System.out.println(message);
         message.setTimestamp(LocalDateTime.now().toString());
         try {
             //Sending the message to kafka topic queue
