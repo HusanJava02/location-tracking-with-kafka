@@ -1,5 +1,5 @@
-# Chat Application
-A Realtime Chat Application built using React and Kafka as MessageBroker
+# Location Tracking Application
+A Realtime Location Tracking Application built Kafka as MessageBroker
 
 
 
